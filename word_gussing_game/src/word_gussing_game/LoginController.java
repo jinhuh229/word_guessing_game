@@ -28,4 +28,12 @@ public class LoginController {
     @FXML
     Label exit_text;
 
+
+
+    public void login_clicked(){
+
+    }
 }
+
+
+
