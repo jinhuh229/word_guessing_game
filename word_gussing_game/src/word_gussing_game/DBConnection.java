@@ -13,8 +13,5 @@ public class DBConnection {
     }
 
 
-    public void login_getconnection() throws SQLException{
 
-
-    }
 }

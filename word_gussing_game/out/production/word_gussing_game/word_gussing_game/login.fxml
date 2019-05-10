@@ -9,16 +9,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="524.0" prefWidth="465.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="word_gussing_game.LoginController">
    <children>
-      <Button fx:id="login_button" layoutX="181.0" layoutY="347.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="103.0" text="Login" />
       <Label layoutX="92.0" layoutY="96.0" prefHeight="53.0" prefWidth="283.0" text="WORD GUESSING GAME">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
       <PasswordField fx:id="password_text" layoutX="120.0" layoutY="282.0" prefHeight="39.0" prefWidth="226.0" />
+      <Button fx:id="login_button" layoutX="181.0" layoutY="347.0" mnemonicParsing="false" onAction="#login_clicked" prefHeight="39.0" prefWidth="103.0" text="Login" />
       <TextField fx:id="username_text" layoutX="120.0" layoutY="199.0" prefHeight="39.0" prefWidth="226.0" />
       <Label layoutX="120.0" layoutY="172.0" prefHeight="20.0" prefWidth="166.0" text="Username or Email" textFill="#5b69ea">
          <font>
@@ -35,7 +34,7 @@
             <Font name="System Italic" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="no_account_text" layoutX="171.0" layoutY="458.0" text="does't have account?" textFill="#2959c2">
+      <Label fx:id="no_account_text" layoutX="171.0" layoutY="458.0" onMouseClicked="#no_account_clicked" text="does't have account?" textFill="#2959c2">
          <font>
             <Font name="System Italic" size="14.0" />
          </font>
@@ -45,7 +44,7 @@
             <Image url="@../image/logo.png" />
          </image>
       </ImageView>
-      <Label fx:id="exit_text" layoutX="433.0" layoutY="14.0" text="X">
+      <Label fx:id="exit_text" layoutX="433.0" layoutY="14.0" onMouseClicked="#close_window" text="X">
          <font>
             <Font size="24.0" />
          </font>
