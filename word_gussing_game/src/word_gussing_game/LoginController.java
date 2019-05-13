@@ -1,21 +1,27 @@
 package word_gussing_game;
 
 
+import com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ResourceBundle;
 
 
-public class LoginController {
+public class LoginController implements Initializable {
+
+    private login select_login;
 
     @FXML
     Button login_button;
@@ -36,6 +42,7 @@ public class LoginController {
     Label exit_text;
 
 
+
     @FXML
     public void login_clicked() throws SQLException {
 
@@ -45,6 +52,9 @@ public class LoginController {
 
         String userName = username_text.getText();
         String password = password_text.getText();
+
+
+        System.out.println(userName);
 
         try {
 
@@ -69,9 +79,16 @@ public class LoginController {
                 try {
                     FXMLLoader fxmlLoader = new FXMLLoader(this.getClass().getResource("main_game_screen.fxml"));
                     Parent root1 = (Parent) fxmlLoader.load();
+
+                    System.out.println(userName);
+                    MainGameScreenController main = fxmlLoader.getController();
+                    main.showLabel(username_text.getText());
+
                     Stage stage = new Stage();
                     stage.setScene(new Scene(root1));
                     stage.show();
+
+
                 } catch (Exception ex) {
                     ex.printStackTrace();
                 }
@@ -121,6 +138,8 @@ public class LoginController {
             String userName = username_text.getText();
             String password = password_text.getText();
 
+
+
             try {
 
 
@@ -142,14 +161,25 @@ public class LoginController {
 
 
                     try {
+
+
                         FXMLLoader fxmlLoader = new FXMLLoader(this.getClass().getResource("main_game_screen.fxml"));
                         Parent root1 = (Parent) fxmlLoader.load();
+
+                        System.out.println(userName);
+                        MainGameScreenController main = fxmlLoader.getController();
+                        main.showLabel(username_text.getText());
                         Stage stage = new Stage();
                         stage.setScene(new Scene(root1));
                         stage.show();
+
+
+
                     } catch (Exception ex) {
                         ex.printStackTrace();
                     }
+
+
                 }
 
             } catch (SQLException ex) {
@@ -162,20 +192,15 @@ public class LoginController {
         }
 
 
+
     // ---------------------------------   get information about account  --------------------------------------------
-        @FXML
-        public String getInformaiton(){
+    @Override
+    public void initialize(URL location, ResourceBundle resources ) {
 
 
-            String getuserName = username_text.getText();
-
-            System.out.println(getuserName);
-
-            return getuserName;
 
 
-        }
-
+    }
 
 
     }

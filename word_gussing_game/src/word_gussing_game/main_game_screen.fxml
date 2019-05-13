@@ -14,8 +14,8 @@
             <Image url="@../image/main_background.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="441.0" layoutY="177.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="119.0" text="Easy" />
-      <Button layoutX="441.0" layoutY="243.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="119.0" text="Hard" />
+      <Button fx:id="easy_mode_button" layoutX="441.0" layoutY="177.0" mnemonicParsing="false" onAction="#easy_button" prefHeight="39.0" prefWidth="119.0" text="Easy" />
+      <Button fx:id="hard_mode_button" layoutX="441.0" layoutY="243.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="119.0" text="Hard" />
       <Label layoutX="48.0" layoutY="55.0" text="Word Gussing Game" textFill="#f2efef">
          <font>
             <Font size="36.0" />
@@ -37,6 +37,8 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="display_id" layoutX="530.0" layoutY="14.0" text="Label" textFill="#eee8e8" />
+
+      <Label fx:id="display_id" layoutX="501.0" layoutY="14.0" text="Label" textFill="#eee8e8" />
+
    </children>
 </AnchorPane>

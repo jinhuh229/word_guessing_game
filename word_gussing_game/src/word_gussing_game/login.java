@@ -1,6 +1,7 @@
 package word_gussing_game;
 
 public class login {
+
     int id;
     String userName;
     String password;
