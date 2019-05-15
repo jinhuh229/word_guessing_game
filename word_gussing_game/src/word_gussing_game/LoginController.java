@@ -138,7 +138,7 @@ public class LoginController implements Initializable {
             String userName = username_text.getText();
             String password = password_text.getText();
 
-
+            login login = new login(userName, password);
 
             try {
 
@@ -147,8 +147,8 @@ public class LoginController implements Initializable {
                 preparedStatement = con.prepareStatement(query);
 
 
-                preparedStatement.setString(1, userName);
-                preparedStatement.setString(2, password);
+                preparedStatement.setString(1, login.getUserName());
+                preparedStatement.setString(2, login.getPassword());
 
                 ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -168,7 +168,7 @@ public class LoginController implements Initializable {
 
                         System.out.println(userName);
                         MainGameScreenController main = fxmlLoader.getController();
-                        main.showLabel(username_text.getText());
+                        main.showLabel(login.getUserName());
                         Stage stage = new Stage();
                         stage.setScene(new Scene(root1));
                         stage.show();

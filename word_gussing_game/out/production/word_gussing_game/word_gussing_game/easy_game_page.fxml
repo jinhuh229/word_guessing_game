@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="625.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game_mode.EasyGamePageController">
+<AnchorPane prefHeight="625.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="word_gussing_game.EasyGamePageController">
    <children>
       <ImageView fitHeight="216.0" fitWidth="316.0" layoutX="276.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -20,7 +20,8 @@
       <Label fx:id="count_label" layoutX="421.0" layoutY="366.0" prefHeight="27.0" prefWidth="270.0" text="Label1" />
       <Label layoutX="275.0" layoutY="401.0" text="Correct words:" />
       <Label fx:id="correct_label" layoutX="421.0" layoutY="401.0" prefHeight="27.0" prefWidth="270.0" text="Label3" />
-      <TextField fx:id="getWord_text" layoutX="272.0" layoutY="483.0" />
+      <TextField fx:id="getWord_text" layoutX="272.0" layoutY="483.0" onAction="#correctWordChecker" />
       <Label layoutX="274.0" layoutY="456.0" text="Type Words (4 Words):" />
+      <Button fx:id="answer_button" layoutX="275.0" layoutY="545.0" mnemonicParsing="false" onAction="#correctWordChecker" text="Check" />
    </children>
 </AnchorPane>
