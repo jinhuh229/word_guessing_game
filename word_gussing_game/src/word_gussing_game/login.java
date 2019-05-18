@@ -37,6 +37,10 @@ public class login {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public void display() {
+        System.out.println("ID: " + getUserName()+ ", password: " + getPassword());
+    }
 }
 
 

@@ -151,6 +151,7 @@ public class LoginController implements Initializable {
                 preparedStatement.setString(2, login.getPassword());
 
                 ResultSet resultSet = preparedStatement.executeQuery();
+                login.display();
 
 
                 if(!resultSet.next()) {

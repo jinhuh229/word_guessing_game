@@ -8,10 +8,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-public class EasyGamePageController implements Initializable {
+public class HardGamePageController implements Initializable {
 
 
     @FXML
@@ -32,7 +31,7 @@ public class EasyGamePageController implements Initializable {
     int count=10;
 
     // temporary word
-    String word = "word";
+    String word = "fuzzed";
     int totalPoint = 0;
     int point = count;
     char[] array = new char[10];
@@ -67,7 +66,7 @@ public class EasyGamePageController implements Initializable {
 
         String getText = getWord_text.getText();
 
-        if(getText.length() == 4) {
+        if(getText.length() == 6) {
             if (getText.equals(word)) {
                 System.out.println("Answer is Correct!");
                 point = count;
